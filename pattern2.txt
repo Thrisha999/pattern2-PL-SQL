@@ -1,0 +1,33 @@
+--Query:to print the pattern
+****
+***
+**
+*
+
+--PL/SQL Block;
+declare
+	n int;
+	i int;
+	j int;
+begin
+	n:=&rows;
+	for i in reverse 1..n
+	loop
+	 for j in 1..i
+	 loop
+	    dbms_output.put('*');
+	 end loop;
+	 dbms_output.new_line();
+	end loop;
+end;
+/
+--output:
+Enter value for rows: 4
+old   6:        n:=&rows;
+new   6:        n:=4;
+****
+***
+**
+*
+
+PL/SQL procedure successfully completed.
